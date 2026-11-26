@@ -1,0 +1,409 @@
+/* Indonesia in Numbers — the look.
+   Deep teal header, vermilion accent, warm paper background. One
+   typeface stack, no webfonts, so the site needs no network at all. */
+
+:root {
+  --teal: #0b3d4f;
+  --teal-dark: #082e3c;
+  --accent: #e4572e;
+  --paper: #f7f4ee;
+  --card: #ffffff;
+  --ink: #1e2a32;
+  --muted: #5c6b73;
+  --line: #e3ddd2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.wrap {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  color: #0b6e6e;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--teal);
+  color: #fff;
+  padding: 8px 14px;
+}
+
+.skip:focus {
+  left: 8px;
+  top: 8px;
+  z-index: 10;
+}
+
+.site-header {
+  background: var(--teal);
+  color: #fff;
+}
+
+.site-header .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 28px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand span {
+  color: #ffb59e;
+  font-weight: 600;
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+}
+
+.site-header nav a {
+  color: #cfe3e6;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 2px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.site-header nav a:hover {
+  color: #fff;
+  border-bottom-color: var(--accent);
+}
+
+main {
+  padding-top: 8px;
+  padding-bottom: 32px;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 1.15;
+  margin: 28px 0 8px;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 22px;
+  margin: 36px 0 6px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--teal);
+}
+
+.lede {
+  font-size: 19px;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+.crumb {
+  margin: 20px 0 0;
+  font-size: 15px;
+}
+
+.source {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+
+.fine {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 24px 0 8px;
+}
+
+.kpi {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--teal);
+  border-radius: 8px;
+  padding: 16px 18px 14px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.kpi:hover {
+  border-top-color: var(--accent);
+}
+
+.kpi-value {
+  display: block;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--teal);
+}
+
+.kpi-label {
+  display: block;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.kpi-detail {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.chart {
+  width: 100%;
+  height: 260px;
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  background: var(--card);
+  font-size: 15px;
+}
+
+th,
+td {
+  padding: 9px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+th {
+  background: var(--teal);
+  color: #fff;
+  font-weight: 600;
+}
+
+td:first-child,
+th:first-child {
+  font-weight: 600;
+}
+
+tbody tr:hover {
+  background: #f2ede3;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 32px;
+  margin: 12px 0 0;
+}
+
+.facts div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.facts dt {
+  font-weight: 600;
+}
+
+.facts dd {
+  margin: 0;
+  text-align: right;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+
+.card-value {
+  display: block;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--teal);
+  line-height: 1.15;
+}
+
+.card-label {
+  display: block;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.card-detail {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.toggle {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.toggle button {
+  font: inherit;
+  font-size: 14px;
+  padding: 7px 12px;
+  border: 1px solid var(--teal);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--teal);
+  cursor: pointer;
+}
+
+.toggle button.active {
+  background: var(--teal);
+  color: #fff;
+}
+
+.toggle button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.toggle button.active:hover {
+  color: #fff;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  align-items: end;
+  margin-top: 16px;
+}
+
+.controls label {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.controls input[type="search"] {
+  font: inherit;
+  font-size: 15px;
+  padding: 8px 10px;
+  margin-left: 8px;
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+  width: 260px;
+  max-width: 100%;
+}
+
+#province-count {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.site-footer {
+  background: var(--teal-dark);
+  color: #b9cdd2;
+  font-size: 14px;
+  padding: 20px 0 28px;
+}
+
+.site-footer a {
+  color: #ffd9cc;
+}
+
+.site-footer p {
+  margin: 4px 0;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .kpis,
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .facts {
+    grid-template-columns: 1fr;
+  }
+
+  .chart {
+    height: 230px;
+  }
+
+  table {
+    font-size: 14px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  .site-header .wrap {
+    gap: 4px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kpis,
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .kpi-value {
+    font-size: 26px;
+  }
+}
